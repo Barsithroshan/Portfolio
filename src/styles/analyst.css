@@ -1,0 +1,193 @@
+/* ==========================================================================
+   DATA ANALYST PORTFOLIO SPECIFIC STYLES
+   ========================================================================== */
+.analyst-hero {
+  padding: 80px 0 60px;
+  position: relative;
+  /* Centered, text-focused, using full available width with no empty photo space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.analyst-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.analyst-hero-heading {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+.analyst-hero-lead {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 760px;
+}
+
+.analyst-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.analyst-stat-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1050px;
+  margin-top: 55px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 28px 36px;
+  box-shadow: var(--card-shadow);
+}
+
+.analyst-stat-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.analyst-stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent-teal);
+}
+
+.analyst-stat-label {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Filter Pill Bar for Projects */
+.filter-pill-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.filter-btn {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-color-hover);
+}
+
+.filter-btn.active {
+  background: rgba(45, 212, 191, 0.12);
+  border-color: var(--accent-teal);
+  color: var(--accent-teal);
+}
+
+/* Analytics Methodology Process Grid */
+.process-frame {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  box-shadow: var(--card-shadow);
+}
+
+.process-header {
+  margin-bottom: 36px;
+}
+
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.p-step-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.p-step-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-teal);
+  transform: translateY(-4px);
+}
+
+.step-badge {
+  font-size: 1.1rem;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent-teal);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(45, 212, 191, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-step-card h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.p-step-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .analyst-stat-strip {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px;
+  }
+  .process-frame {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .analyst-stat-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
